@@ -133,9 +133,15 @@ let pass=document.getElementById("password").value;
 if(pass=="0807"){
 
 document.getElementById("msg").innerHTML =
-"❤️ Password correct! Surprise unlocked soon...";
+"❤️ Welcome Nancu... Your surprise is waiting ✨";
 
-}
+setTimeout(function(){
+
+window.location.href="countdown.html";
+
+},2000);
+
+    }
 
 else{
 
