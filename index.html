@@ -3,7 +3,9 @@
 
 <head>
 <title>Secret Birthday Surprise ❤️</title>
-
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 <style>
 
 body{
@@ -52,7 +54,42 @@ button{
     color:white;
     font-size:20px;
 }
+body::before{
+    content:"❤️ ❤️ ✨ ❤️ ✨ ❤️";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    font-size:35px;
+    opacity:0.15;
+    animation:move 10s linear infinite;
+    pointer-events:none;
+}
 
+@keyframes move{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100vh);
+    }
+}
+
+.box{
+    animation:appear 1.5s ease;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+    }
 
 </style>
 
