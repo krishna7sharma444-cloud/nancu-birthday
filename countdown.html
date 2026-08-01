@@ -20,24 +20,61 @@ body{
     text-align:center;
     color:white;
 }
-
 .box{
-    background:white;
+    background:rgba(255,255,255,0.92);
     color:#ff4b6e;
-    padding:35px;
-    border-radius:25px;
-    width:80%;
-}
+    padding:40px 25px;
+    border-radius:30px;
+    width:85%;
+    max-width:420px;
+    box-shadow:0 0 35px rgba(255,255,255,0.35);
+    animation:fadeIn 1.5s ease;
+        }
 
 h1{
     font-size:35px;
 }
 
 #timer{
-    font-size:25px;
+    font-size:30px;
     font-weight:bold;
+    margin:25px 0;
+    color:#ff2d55;
+    }
+body::before{
+    content:"❤️ ✨ ❤️ ✨ ❤️";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    font-size:35px;
+    opacity:0.12;
+    pointer-events:none;
+    animation:floatBg 12s linear infinite;
 }
 
+@keyframes floatBg{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100vh);
+    }
+}
+
+
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:scale(0.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
 </style>
 
 </head>
@@ -46,14 +83,23 @@ h1{
 <body>
 
 <div class="box">
+    
+<h1>🎂 Nancu's Birthday Surprise ❤️</h1>
 
-<h1>🎁 Something Special Is Waiting ❤️</h1>
 
 <p>
-Nancu, your surprise will unlock on your birthday ✨
+Something special is waiting for you ✨
 </p>
 
+<p>
+Just wait a little more... ❤️
+</p>
+ 
 <h2 id="timer"></h2>
+
+<p style="font-size:18px;">
+Every second brings you closer to your surprise ❤️
+</p>
 
 </div>
 
@@ -82,7 +128,11 @@ let seconds = Math.floor((distance%(1000*60))/1000);
 document.getElementById("timer").innerHTML =
 days+" Days "+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds";
 
+if(distance <= 0){
 
+window.location.href="birthday.html";
+
+    }
 },1000);
 
 </script>
