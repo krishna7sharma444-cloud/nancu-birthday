@@ -13,7 +13,7 @@ body{
     background:linear-gradient(#ff9a9e,#fad0c4);
     font-family:Arial;
     text-align:center;
-    color:white;
+    color:#ff4b6e;
 }
 
 .container{
@@ -22,11 +22,43 @@ body{
 
 h1{
     font-size:45px;
+    color:white;
+}
+
+.card{
+    background:white;
+    padding:30px 20px;
+    border-radius:30px;
+    box-shadow:0 0 25px rgba(255,75,110,0.3);
+    animation:fadeIn 1.5s ease;
+    margin-top:30px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 p{
-    font-size:28px;
+    font-size:25px;
     line-height:1.8;
+}
+
+.heart{
+    font-size:80px;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+    50%{
+        transform:scale(1.2);
+    }
 }
 </style>
 
@@ -37,6 +69,9 @@ p{
 <div class="container">
 
 <h1>❤️ For My Nancu ❤️</h1>
+<div class="heart">❤️</div>
+
+<div class="card">
 
 <p>
 I LOVE YOU ❤️<br>
