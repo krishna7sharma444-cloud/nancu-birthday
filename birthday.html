@@ -98,7 +98,20 @@ body::before{
         transform:scale(1.2);
     }
 }
+.cake{
+    font-size:90px;
+    animation:cakeBounce 1s infinite;
+}
 
+@keyframes cakeBounce{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.wish{
+    font-size:18px;
+}
 </style>
 
 </head>
@@ -107,6 +120,20 @@ body::before{
 <audio controls loop>
     <source src="haareya.mp3" type="audio/mpeg">
 </audio>
+    <div class="cake">
+🎂
+</div>
+
+<p class="wish">
+Make a wish and blow the candles ✨
+</p>
+
+<button onclick="blowCake()">
+Blow Candle ❤️
+</button>
+
+<p id="cakeMsg"></p>
+    
 <div class="container">
 
 <div class="heart">❤️</div>
@@ -342,8 +369,48 @@ toh hamesha ek dusre ka support bane rahenge aur saath mei soyenge jaisa Tumne k
 </p>  
  
   </div>
-    <div class="card">
+        <div class="card">
 
+<h2>💌 A Special Memory ❤️</h2>
+
+<p>
+Nancu ❤️
+</p>
+
+<p>
+Ek memory hai jo mere liye bahut special hai...
+</p>
+
+<p>
+Ek baar tumne mujhe ek letter diya tha,
+jisme tumhari feelings aur tumhari baatein thi ✨
+</p>
+
+<p>
+Main us letter ko yahan share nahi kar sakta,
+kyunki kuch cheezein sirf hum dono ke beech hi rehni chahiye ❤️
+</p>
+
+<p>
+Bas itna kehna hai...
+ki tumhara wo trust aur wo effort mere liye bahut precious hai.
+</p>
+
+<p>
+Thank you mujhe itna special feel karwane ke liye 🥺❤️
+</p>
+            
+<p>
+Kuch memories duniya ko dikhane ke liye nahi hoti...
+bas dil me sambhal ke rakhne ke liye hoti hain ❤️
+</p>
+
+<p>
+Aur tumhara diya hua wo trust mere liye hamesha special rahega ✨
+</p>
+        </div>
+<div class="card">
+    
 <h2>💯 100 Reasons I Love You ❤️</h2>
 
 <p>
@@ -428,7 +495,24 @@ aur tumhari smile mere liye sabse important hai 🥺❤️
 </p>
 
       </div>
-
+<h2>🌙 A Little More From My Heart ❤️</h2><p>
+Nancu ❤️
+</p><p>
+Pata hai, tum meri life ka wo beautiful part ho jiske aane se bahut saare normal moments bhi special ban gaye ✨
+</p><p>
+Tumhari smile, tumhari baatein aur tumhara care karna mere liye bahut precious hai ❤️
+</p><p>
+Mera ek beautiful sapna hai ki hum dono apne dreams achieve karein, ek dusre ka support bane rahein aur har khushi ko saath celebrate karein ✨
+</p><p>
+Main hamesha koshish karunga ki tumhe samjhu, tumhari respect karu aur tumhare liye ek achha insaan banu ❤️
+</p><p>
+Tum meri favourite person ho,
+meri favourite memory ho,
+aur meri favourite feeling bhi ❤️
+</p><p>
+Bas aise hi hamesha smile karte rehna Nancu...
+kyunki tumhari smile mere liye bahut special hai 🥺❤️
+</p>
 
 <div class="card">
 
@@ -475,7 +559,16 @@ Ek aur chhota sa surprise hai tumhare liye ✨
 
 
 </div>
+<script>
+function blowCake(){
 
+document.querySelector(".cake").innerHTML="🎂✨";
+
+document.getElementById("cakeMsg").innerHTML =
+"Happy Birthday Nancu ❤️<br>May all your wishes come true ✨";
+
+}
+</script>
 </body>
 
 </html>
